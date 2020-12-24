@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.building_img {
+  width: 100%;
+  overflow-x: hidden; }
+  .building_img svg {
+    width: 100%; }
+    .building_img svg path, .building_img svg polygon {
+      transition: all .4s;
+      fill: transparent; }
+    .building_img svg #Layer_2 rect {
+      transition: all .4s; }
+    .building_img svg #Layer_2 text {
+      transition: all 0.4s; }
+  .building_img .hidden_stare {
+    cursor: not-allowed; }
+  .building_img .build_hover {
+    cursor: pointer; }
+    .building_img .build_hover:hover {
+      fill: rgba(255, 255, 255, 0.6); }
+
+/*# sourceMappingURL=main.css.map */

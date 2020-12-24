@@ -1,0 +1,41 @@
+* {
+	
+	padding: 0;
+	margin:0;
+}
+
+.building_img {
+	width: 100%;
+	overflow-x: hidden;
+
+	svg {
+		width: 100%;
+
+		 path,polygon {
+		 		transition: all .4s;
+		 	fill: transparent;
+		 }
+
+		 #Layer_2 {
+
+		 	rect {
+		 		transition: all .4s;
+
+		 	}
+		 	text {
+		 		transition: all .4s
+		 	}
+
+		 }
+	}
+	.hidden_stare {
+		cursor: not-allowed;
+	}
+	.build_hover {
+		cursor: pointer;
+	
+		&:hover {
+			fill:rgba(255,255,255,.6);
+		}
+	}
+}
