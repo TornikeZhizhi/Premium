@@ -40,12 +40,14 @@ a{
 
 		 	rect {
 		 		transition: all .4s;
+		 		fill: #fff;
 
 		 	}
 		 	text {
 		 		transition: all .4s;
 		 		font-size: 18px;
   			  font-weight: bold;
+  			  fill: transparent;
 		 	}
 
 		 }
@@ -270,7 +272,7 @@ a{
 				    display: flex;
 				    align-items: center;
 				    background-color: #fff;
-				    min-width: 244px;
+				    min-width: 274px;
 				    visibility: hidden;
 				    opacity: 0;
 				    &:after {
@@ -465,6 +467,7 @@ a{
 	border: 1px solid #D0B082;
 	box-shadow: 0 0 30px rgba(0,0,0,.1);
 	padding: 0 50px;
+	cursor: pointer;
 
 	span {
 		margin-left: 10px;
@@ -480,13 +483,14 @@ a{
 }
 
 	.flat_gradient {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: calc(100vw - 17px);
 		height: 100vh;
 		background-color: rgba(0,0,0,.7);
 		z-index: 1000;
+		display: none;
 	}
 
 
@@ -551,12 +555,13 @@ a{
 
 .flat_calculator_fluid {
 
-	position: absolute;
-	bottom: 100px;
+	position: fixed;
+	bottom: 50px;
 	right: 20%;
 	z-index: 2000;
 	width: 100%;
 	max-width: 465px;
+	display: none;
 	.calc_header {
 
 		background-color:#303030;
@@ -744,6 +749,7 @@ a{
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
+	display: none;
 
 	&>div {
 		margin-bottom: 2px;
@@ -761,4 +767,8 @@ a{
 	&.anime {
 		background-color: #cc9a54;
 	}
+}
+
+.body_over {
+	overflow: hidden;
 }

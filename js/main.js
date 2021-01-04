@@ -27,8 +27,11 @@ $("#Layer_1 .build_hover").each(function(index){
 	})
 
 	$(this).mouseleave(function(){
- 		$('#Layer_2 .st'+(index + 1)+'').css("fill","#000000");
- 		$('#Layer_2 .st'+(index + 1)+'').css("x","524.9")
+ 		$('#Layer_2 rect.st'+(index + 1)+'').css("fill","#fff");
+ 		$('#Layer_2 rect.st'+(index + 1)+'').css("x","524.9")
+
+ 		$('#Layer_2 text.st'+(index + 1)+'').css("fill","transparent");
+ 		$('#Layer_2 text.st'+(index + 1)+'').css("x","524.9")
 	
 	})
 
@@ -65,19 +68,19 @@ $(".flat_footer a").click(function(e){
 	$(".feedback-modal").addClass("activ")
 })
 
-var partData = Number($(".part_value span").attr("data-max"))
+var partData = Number($(".part_value span").attr("data-min"))
 var defValue = Number($(".part_value span").text())
 
 
 $(".part_min").click(function(){
-	if (defValue >= 1) {
+	if (defValue > partData) {
 		defValue--;
 		$(".part_value span").text(defValue)	
 	}
 })
 
 $(".part_max").click(function(){
-	if (defValue < partData) {
+	if (defValue < 100) {
 		defValue++;
 		$(".part_value span").text(defValue)	
 	}	
@@ -105,6 +108,7 @@ $(".cost_period_max").click(function(){
 	var flatPrice = Number($(".flat_price span").text().replace(/\s/g, ''))
 $(".calc").click(function(){
 
+		$(".calc_sum").fadeIn()
 	$(this).addClass("anime")
 
 	setTimeout(function(){
@@ -112,10 +116,30 @@ $(".calc").click(function(){
 	},500)
 
 	var partly = flatPrice * defValue / 100
-	$(".calc_sum .first span").text(partly)
+	$(".calc_sum .first span").text(partly.toFixed(2))
 	
 
 	var monthly = (flatPrice - partly) / costDefValue
-	$(".calc_sum .second span").text(monthly)
+	$(".calc_sum .second span").text(monthly.toFixed(2))
 
+})
+
+
+$(".flat_calculator").click(function(){
+		$(".flat_gradient").fadeIn(50)
+		$(".flat_calculator_fluid").fadeIn(450);
+		$("body").addClass("body_over")
+
+})
+
+$(".calc_close, .flat_gradient").click(function(){
+	$(".flat_gradient").fadeOut(50)
+		$(".flat_calculator_fluid").fadeOut(50);
+		$("body").removeClass("body_over")
+		$(".calc_sum").fadeOut()
+})
+
+$(".flat_calculator_fluid").click(function(e){
+
+	e.stopPropagation()
 })

@@ -26,11 +26,13 @@ a {
       transition: all .4s;
       fill: transparent; }
     .building_img svg #Layer_2 rect {
-      transition: all .4s; }
+      transition: all .4s;
+      fill: #fff; }
     .building_img svg #Layer_2 text {
       transition: all .4s;
       font-size: 18px;
-      font-weight: bold; }
+      font-weight: bold;
+      fill: transparent; }
   .building_img .hidden_stare {
     cursor: not-allowed; }
   .building_img .build_hover {
@@ -166,7 +168,7 @@ a {
       display: flex;
       align-items: center;
       background-color: #fff;
-      min-width: 244px;
+      min-width: 274px;
       visibility: hidden;
       opacity: 0; }
       .flat_inner_right_info .flat_inner_cost .flat_tool_tip .flat_tooltip_box:after {
@@ -288,7 +290,8 @@ a {
   justify-content: center;
   border: 1px solid #D0B082;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  padding: 0 50px; }
+  padding: 0 50px;
+  cursor: pointer; }
   .flat_calculator span {
     margin-left: 10px; }
 
@@ -299,13 +302,14 @@ a {
   overflow: hidden; }
 
 .flat_gradient {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: calc(100vw - 17px);
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000; }
+  z-index: 1000;
+  display: none; }
 
 .slick-lightbox-close:before {
   font-size: 51px; }
@@ -342,12 +346,13 @@ a {
     left: 30px; }
 
 .flat_calculator_fluid {
-  position: absolute;
-  bottom: 100px;
+  position: fixed;
+  bottom: 50px;
   right: 20%;
   z-index: 2000;
   width: 100%;
-  max-width: 465px; }
+  max-width: 465px;
+  display: none; }
   .flat_calculator_fluid .calc_header {
     background-color: #303030;
     display: flex;
@@ -477,7 +482,8 @@ a {
 .calc_sum {
   margin-top: 20px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  display: none; }
   .calc_sum > div {
     margin-bottom: 2px; }
 
@@ -488,5 +494,8 @@ a {
   transition: all .3s; }
   .calc.anime {
     background-color: #cc9a54; }
+
+.body_over {
+  overflow: hidden; }
 
 /*# sourceMappingURL=main.css.map */
