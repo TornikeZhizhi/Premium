@@ -2,11 +2,15 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Conv_bpg_nino_mtavruli_normal'; }
 
 a {
   text-decoration: none; }
 
+/*body {
+	width: 100vw;
+}*/
 @font-face {
   font-family: 'Conv_bpg_nino_mtavruli_normal';
   src: url("../fonts/bpg_nino_mtavruli_normal.eot");
@@ -47,7 +51,8 @@ a {
   max-width: 1200px;
   margin: 50px auto 40px;
   position: relative;
-  padding: 0 30px 0 70px; }
+  padding: 0 30px 0 70px;
+  min-height: 50vh; }
   .flat_wrapper .flat_up_info {
     display: flex;
     justify-content: space-around;
@@ -87,6 +92,8 @@ a {
   max-width: 500px;
   margin: 40px auto 30px;
   display: flex; }
+  .flat_header.align_center {
+    align-items: center; }
   .flat_header .flat_info {
     margin: 0 70px 0 90px;
     display: flex;
@@ -99,7 +106,8 @@ a {
       margin-bottom: 20px; }
   .flat_header .flat_back a {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    color: #000; }
     .flat_header .flat_back a span {
       margin-left: 10px; }
   .flat_header .flat_arrows {
@@ -136,5 +144,349 @@ a {
       margin-right: 40px; }
     .flat_pos_info > div svg {
       margin-right: 20px; }
+
+.flat__inner_centerinfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px; }
+
+.flat_inner_right_info .flat_inner_cost {
+  display: flex; }
+  .flat_inner_right_info .flat_inner_cost .flat_tool_tip {
+    margin-left: 5px;
+    position: relative;
+    cursor: pointer; }
+    .flat_inner_right_info .flat_inner_cost .flat_tool_tip .flat_tooltip_box {
+      position: absolute;
+      top: 43px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px solid #707070;
+      padding: 15px 5px 10px 18px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      min-width: 244px;
+      visibility: hidden;
+      opacity: 0; }
+      .flat_inner_right_info .flat_inner_cost .flat_tool_tip .flat_tooltip_box:after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-top: 1px solid #707070;
+        border-left: 1px solid #707070;
+        transform: translateX(-50%) rotate(45deg);
+        top: -9px;
+        left: 50%;
+        background: #fff; }
+    .flat_inner_right_info .flat_inner_cost .flat_tool_tip:hover .flat_tooltip_box {
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s; }
+
+.flat_wrapper_inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: flex-start; }
+  .flat_wrapper_inner .flat_wrapper_left {
+    flex: 0 0 350px;
+    max-width: 350px;
+    max-height: 450px;
+    min-height: 300px; }
+    .flat_wrapper_inner .flat_wrapper_left .flat_wrapper_img {
+      width: 100%;
+      height: 100%; }
+      .flat_wrapper_inner .flat_wrapper_left .flat_wrapper_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+
+.flat_wrapper_right {
+  flex-grow: 1;
+  margin-left: 70px; }
+  .flat_wrapper_right .flat_wrapper_right_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+    .flat_wrapper_right .flat_wrapper_right_info .flat_tabs {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      flex: 0 0 280px;
+      max-width: 280px; }
+      .flat_wrapper_right .flat_wrapper_right_info .flat_tabs .flat_tab_text h3 {
+        color: #C0C3CF; }
+      .flat_wrapper_right .flat_wrapper_right_info .flat_tabs .flat_tab_text span {
+        font-weight: bold;
+        color: #000; }
+      .flat_wrapper_right .flat_wrapper_right_info .flat_tabs .flat_tab_num {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: #341325;
+        flex: 0 0 35px;
+        width: 35px;
+        height: 35px; }
+        .flat_wrapper_right .flat_wrapper_right_info .flat_tabs .flat_tab_num span {
+          color: #fff; }
+
+.flat_inner_slider .portfolio-slides {
+  max-width: 500px; }
+.flat_inner_slider .single a:focus {
+  outline: none; }
+.flat_inner_slider .single img {
+  width: 167px;
+  height: 128px;
+  object-fit: contain; }
+
+.slick_arrow_fluid {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 25px;
+  max-width: 500px; }
+  .slick_arrow_fluid .arrow_left {
+    margin-right: 30px; }
+  .slick_arrow_fluid div {
+    cursor: pointer; }
+
+.flat_footer {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px; }
+  .flat_footer .flat_book a {
+    background-color: #D0B082;
+    display: flex;
+    align-items: center;
+    color: #341325;
+    box-sizing: content-box;
+    max-width: 190px;
+    padding: 15px 0px 10px 33px;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s; }
+    .flat_footer .flat_book a:hover {
+      background: #341325; }
+      .flat_footer .flat_book a:hover svg path {
+        fill: #D0B082; }
+      .flat_footer .flat_book a:hover span {
+        color: #D0B082; }
+    .flat_footer .flat_book a span {
+      margin-left: 10px;
+      color: #341325; }
+
+.flat_calculator {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D0B082;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 0 50px; }
+  .flat_calculator span {
+    margin-left: 10px; }
+
+.flat_section {
+  width: 100%;
+  padding: 5px 0 50px;
+  position: relative;
+  overflow: hidden; }
+
+.flat_gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 17px);
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000; }
+
+.slick-lightbox-close:before {
+  font-size: 51px; }
+
+.slick-lightbox-close {
+  height: 50px;
+  width: 50px; }
+
+.slick-lightbox .slick-prev, .slick-lightbox .slick-next {
+  z-index: 1000; }
+.slick-lightbox .slick-next {
+  width: 60px;
+  height: 15px;
+  background: unset;
+  background: url("../img/light_right.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .slick-lightbox .slick-next:before {
+    content: unset; }
+  .slick-lightbox .slick-next .slick-lightbox .slick-next {
+    right: 30px; }
+.slick-lightbox .slick-prev {
+  width: 60px;
+  height: 15px;
+  background: unset;
+  background: url("../img/light_left.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .slick-lightbox .slick-prev:before {
+    content: unset; }
+  .slick-lightbox .slick-prev .slick-lightbox .slick-prev {
+    left: 30px; }
+
+.flat_calculator_fluid {
+  position: absolute;
+  bottom: 100px;
+  right: 20%;
+  z-index: 2000;
+  width: 100%;
+  max-width: 465px; }
+  .flat_calculator_fluid .calc_header {
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 19px 10px; }
+    .flat_calculator_fluid .calc_header svg {
+      fill: #fff; }
+    .flat_calculator_fluid .calc_header span {
+      color: #fff;
+      margin-left: 10px; }
+
+.calc_body {
+  padding: 30px;
+  background-color: #fff; }
+  .calc_body .calc_flat_box {
+    position: relative; }
+  .calc_body .flat_tool_tip {
+    position: relative; }
+    .calc_body .flat_tool_tip:hover .flat_tooltip_box {
+      visibility: visible !important;
+      opacity: 1 !important;
+      transition: all .3s; }
+    .calc_body .flat_tool_tip svg {
+      cursor: pointer; }
+  .calc_body .calc_flat_box_title {
+    display: flex; }
+    .calc_body .calc_flat_box_title > span {
+      margin-right: 10px;
+      white-space: nowrap; }
+  .calc_body .flat_tooltip_box {
+    position: absolute;
+    top: -82px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #707070;
+    padding: 15px 5px 10px 18px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    min-width: 244px;
+    width: 271px;
+    visibility: hidden;
+    opacity: 0; }
+    .calc_body .flat_tooltip_box:after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-bottom: 1px solid #707070;
+      border-right: 1px solid #707070;
+      transform: translateX(-50%) rotate(45deg);
+      bottom: -9px;
+      left: 50%;
+      background: #fff; }
+
+.flat_price_fluid {
+  display: flex;
+  border: 1px solid #707070;
+  margin: 10px 0;
+  width: 100%; }
+  .flat_price_fluid .flat_price {
+    padding: 16px 10px 16px 50px;
+    flex-grow: 1; }
+    .flat_price_fluid .flat_price span {
+      color: #000000;
+      opacity: .3; }
+  .flat_price_fluid .flat_equ {
+    background-color: #707070;
+    flex: 0 0 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .flat_price_fluid .flat_equ span {
+      color: #fff; }
+
+.participation_box, .cost_period_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D0B082;
+  padding: 16px 10px; }
+
+.part_value, .cost_period_value {
+  margin: 0 15px; }
+
+.cost_period_box {
+  border: 1px solid #707070; }
+
+.calc_inner_body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .calc_inner_body > div {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-top: 14px; }
+    .calc_inner_body > div .common_title {
+      margin-bottom: 10px; }
+
+.calc_footer {
+  display: flex;
+  background-color: #fff; }
+  .calc_footer > div {
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .calc_footer .calc {
+    background-color: #D0B082;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px; }
+  .calc_footer .calc_close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #E6E6E6; }
+    .calc_footer .calc_close svg {
+      margin-right: 10px; }
+
+.part_min, .part_max, .cost_period_min, .cost_period_max, .calc, .calc_close {
+  cursor: pointer;
+  user-select: none; }
+
+.calc_sum {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; }
+  .calc_sum > div {
+    margin-bottom: 2px; }
+
+.part_value span, .calc_sum span {
+  padding-right: 5px; }
+
+.calc {
+  transition: all .3s; }
+  .calc.anime {
+    background-color: #cc9a54; }
 
 /*# sourceMappingURL=main.css.map */
