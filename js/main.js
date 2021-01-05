@@ -116,11 +116,11 @@ $(".calc").click(function(){
 	},500)
 
 	var partly = flatPrice * defValue / 100
-	$(".calc_sum .first span").text(partly.toFixed(2))
+	$(".calc_sum .first .dt").text(partly.toFixed(2))
 	
 
 	var monthly = (flatPrice - partly) / costDefValue
-	$(".calc_sum .second span").text(monthly.toFixed(2))
+	$(".calc_sum .second .dt").text(monthly.toFixed(2))
 
 })
 
