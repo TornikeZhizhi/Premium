@@ -825,6 +825,7 @@ font-family: 'Conv_bpg_mrgvlovani_2009';
     padding: 5px 10px 15px;
 }
 .flat_header {
+	    margin: 20px auto 5px;
 	align-items: center;
 	justify-content: space-evenly;
 }
@@ -888,6 +889,7 @@ font-family: 'Conv_bpg_mrgvlovani_2009';
 }
 .flat_wrapper_inner .flat_wrapper_left {
 	max-height: unset;
+	margin: 0 auto;
 }
 .flat_wrapper_right {
 
@@ -961,7 +963,9 @@ font-family: 'Conv_bpg_mrgvlovani_2009';
     transition: none;
     transform: translateX(-50%);
 }
-
+.flat_inner_slider .single img {
+	width: 100%;
+}
 
 
 }

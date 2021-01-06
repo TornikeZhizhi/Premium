@@ -532,6 +532,7 @@ a {
     padding: 5px 10px 15px; }
 
   .flat_header {
+    margin: 20px auto 5px;
     align-items: center;
     justify-content: space-evenly; }
 
@@ -580,7 +581,8 @@ a {
       margin-bottom: 10px; }
 
   .flat_wrapper_inner .flat_wrapper_left {
-    max-height: unset; }
+    max-height: unset;
+    margin: 0 auto; }
 
   .flat_wrapper_right {
     margin-left: 7px; }
@@ -642,6 +644,9 @@ a {
     max-width: 465px;
     left: 50%;
     transition: none;
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+
+  .flat_inner_slider .single img {
+    width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
