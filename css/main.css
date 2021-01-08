@@ -647,6 +647,9 @@ a {
     transform: translateX(-50%); }
 
   .flat_inner_slider .single img {
-    width: 100%; } }
+    width: 100%; }
+
+  .building_img svg #Layer_2 text {
+    fill: #fff; } }
 
 /*# sourceMappingURL=main.css.map */
