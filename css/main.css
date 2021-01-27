@@ -41,7 +41,7 @@ a {
       font-weight: bold;
       fill: transparent; }
   .building_img .hidden_stare {
-    cursor: not-allowed; }
+    cursor: not-allowed !important; }
   .building_img .build_hover {
     cursor: pointer; }
     .building_img .build_hover:hover {
