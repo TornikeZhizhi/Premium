@@ -93,7 +93,6 @@ a {
     .flat .st0.booked {
       fill: rgba(255, 255, 255, 0.7); }
     .flat .st0.sold {
-      pointer-events: none;
       fill: rgba(0, 0, 0, 0.7); }
 
 .flat_header {

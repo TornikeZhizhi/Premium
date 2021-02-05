@@ -40,7 +40,10 @@ $("#Layer_1 .build_hover").each(function(index){
 
 $('body').on('click','.link_path',function(){
 
+	if (!$(this).hasClass("sold")) {
+
       window.location = $(this).data('url');
+	}
     });
 
 
@@ -142,3 +145,12 @@ $(".flat_calculator_fluid").click(function(e){
 
 	e.stopPropagation()
 })
+
+
+
+$('.link_path').on('mouseenter',function(){
+
+      var num = $(this).data('number');
+      console.log(num)
+      $(".flat_aparment_info span").eq(1).text(num)
+    });
